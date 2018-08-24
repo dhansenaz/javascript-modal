@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+body{
+    font-family: 'Montserrat';
+    font-size: 17px;
+    line-height: 1.6;
+}
+p{
+    margin:0;
+    font-size: 4.5em;
+}
+.description{
+    font-size: 1em;
+    margin-top: -1em;
+}
+
+.button{
+    background: rgb(185, 0, 161);
+    padding:1em 2em;
+    color:white;
+    border-radius: 1em;
+    border: 1px solid black;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0, 0.2),
+    0 7px 20px 0 rgba(0,0,0, 0.17);
+}
+.button:hover{
+    background: rgb(252, 3, 231);
+}
+.modal{
+    display: none;
+    position:fixed;
+    z-index: 1;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+.modal-content{
+    background-image: url(https://media.giphy.com/media/3ov9k1173PdfJWRsoE/source.gif);
+    background:cover;
+    margin:20% auto;
+    padding: 20px;
+    color:white;
+    width:60%;
+    height:200px;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0, 0.2),
+    0 7px 20px 0 rgba(0,0,0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+    border-radius: 1em;
+    border: 1px solid rgb(171, 0, 187);
+    text-align: center;
+    line-height: 200px;
+    
+}
+
+.closeBtn{
+    color:#ccc;
+    float: right;
+    font-size: 30px;
+    margin-top:-3em
+
+}
+.closeBtn:hover,.closeBtn:focus{
+    color:rgb(187, 0, 140);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@media(max-width:900px){
+    .modal-content p{
+      font-size:2.5em;
+    }
+  }
+  @media(max-width:650px){
+    .modal-content p{
+      font-size:2em;
+    }
+  }
+  @media(max-width:420px){
+    .modal-content p{
+      font-size:1.25em;
+    }
+  }
+  @media(max-width:300px){
+    .modal-content p{
+      font-size:1em;
+    }
+  }
+  @media(max-width:600px){
+    .description{
+      font-size:16px;
+    }
+  }
